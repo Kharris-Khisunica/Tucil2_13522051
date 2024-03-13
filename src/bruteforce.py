@@ -18,7 +18,6 @@ def bf(point_list):
     #Get bezier_points
     
     print(f"There're {len(bezier_point)} points created.")
-    print(bezier_point)
 
     return bezier_point
 

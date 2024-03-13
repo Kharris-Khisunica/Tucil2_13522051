@@ -30,15 +30,15 @@ def input_point_list():
         while True:
             point = input(f"Enter the Coordinate (x,y) of Point-{i} Separated by Space: ").split()
             if len(point) != 2:
-                print("Please enter exactly two integer seperated by space.")
+                print("Please enter exactly two real numbers seperated by space.")
                 continue
             try:
-                x,y = map(int, point)
+                x,y = map(float, point)
                 point = (x,y)
                 point_list.append(point)
                 break
             except ValueError:
-                print("Please enter two integer only.")
+                print("Please enter two real numbers only.")
         print('\t')
     return point_list
 
@@ -48,8 +48,6 @@ def visualize (bezier_point):
     x = [x for x,_ in bezier_point]
     y = [y for _,y in bezier_point]
 
-    print(x)
-    print(y)
     plt.plot(x,y)
 
     plt.show()
