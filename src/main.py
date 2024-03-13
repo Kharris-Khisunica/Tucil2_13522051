@@ -42,17 +42,19 @@ if Choice == 1:
     end = time.time()
 
     visualize(bezier_point)
-    
+
     print(f"Brute Force Methode took: {((end-start)*1000):.2f} ms")
     #Clear Memory ?
 
 elif Choice == 2:
     print("You Choose Divide and Conquer Methode.")
     point_list = input_point_list()
-    print(point_list)
+    
     start = time.time()
-    dnc(point_list)
+    bezier_point = dnc(point_list)
     end = time.time()
+
+    visualize(bezier_point)
 
     print(f"Divide and Conquer Methode took: {((end-start)*1000):.2f} ms")
     #Clear Memory?
@@ -64,7 +66,7 @@ else: #Choice == 3
 
     #DnC
     dnc_start = time.time()
-    dnc(point_list)
+    bezier_point = dnc(point_list)
     dnc_end = time.time()
 
     dnc_time = dnc_end - dnc_start
@@ -72,7 +74,7 @@ else: #Choice == 3
 
     #BruteForce
     bf_start = time.time()
-    bruteforce(point_list)
+    bezier_point = bf(point_list)
     bf_end = time.time()
 
     bf_time = bf_end - bf_start
