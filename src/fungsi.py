@@ -18,7 +18,18 @@ def Choice():
         Choice = int(input("Please Input Your Choice (1/2/3): "))
 
     return Choice
-    
+
+def input_iteration():
+
+    iteration = int(input("How Many Iterations (>=1): "))
+
+    while (iteration < 1):
+        print("You're inputing an invalid number. Please Retry.")
+        iteration = int(input("How Many Iterations (>=1): "))
+
+    return iteration
+
+
 def input_point_list():
 #Meminta user untuk memasukkan point_listrmasi yang diperlukan, yaitu banyak titik kontrol, dan koordinat nya. 
     

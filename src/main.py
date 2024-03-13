@@ -1,5 +1,5 @@
-from dnc import *
 from bruteforce import *
+from dnc import *
 from fungsi import *
 import matplotlib
 import time
@@ -36,51 +36,45 @@ if Choice == 1:
     print("You Choose Bruteforce Methode.")
     point_list = input_point_list()
     print(point_list)
+    iteration = input_iteration()
 
-    start = time.time()
-    bezier_point = bf(point_list)
-    end = time.time()
+    time = bf(point_list)
 
-    visualize(bezier_point)
-
-    print(f"Brute Force Methode took: {((end-start)*1000):.2f} ms")
+    print(f"Brute Force Methode took: {(time*1000):.2f} ms")
     #Clear Memory ?
 
 elif Choice == 2:
     print("You Choose Divide and Conquer Methode.")
     point_list = input_point_list()
+    iteration = input_iteration()
     
-    start = time.time()
-    bezier_point = dnc(point_list)
-    end = time.time()
+    time = dnc(point_list)
 
-    visualize(bezier_point)
+    print(f"Divide and Conquer Methode took: {(time*1000):.2f} ms")
 
-    print(f"Divide and Conquer Methode took: {((end-start)*1000):.2f} ms")
     #Clear Memory?
 
 else: #Choice == 3
 
     print("You Choose Comparison Mode.")
     point_list = input_point_list()
+    iteration = input_iteration
 
     #DnC
-    dnc_start = time.time()
-    bezier_point = dnc(point_list)
-    dnc_end = time.time()
+    dnc_time = dnc(point_list)
+    
+    bf_time = bf(point_list)
+    
+    time = (bf_time-dnc_time)/(dnc_time) * 100 
 
-    dnc_time = dnc_end - dnc_start
-    print(f"Divide and Conquer Methode took: {(dnc_time*1000):.2f} ms")  
+    print('\t')
+    if time >= 0:
+        print(f"Wow. Brute Force Methode is {time :.2f}% slower")
+    else:
+        print(f"Wow. Divide and Conquer Methode is {-time :.2f}% slower")
 
-    #BruteForce
-    bf_start = time.time()
-    bezier_point = bf(point_list)
-    bf_end = time.time()
 
-    bf_time = bf_end - bf_start
-    print(f"Brute Force Methode took: {(bf_time*1000):.2f} ms") 
-
-    print(f"Wow. Brute Force Methode is {(bf_end-dnc_end)/(dnc_end) * 100 :.2f}% slower")
+    
 
 
 
