@@ -36,21 +36,21 @@ if Choice == 1:
     print("You Choose Bruteforce Methode.")
     point_list = input_point_list()
     print(point_list)
-    iteration = input_iteration()
+#    iteration = input_iteration()
 
     time = bf(point_list)
 
-    print(f"Brute Force Methode took: {(time*1000):.2f} ms")
+    print(f"Brute Force Methode took: {(time*1000):.5f} ms")
     #Clear Memory ?
 
 elif Choice == 2:
     print("You Choose Divide and Conquer Methode.")
     point_list = input_point_list()
-    iteration = input_iteration()
+#    iteration = input_iteration()
     
     time = dnc(point_list)
 
-    print(f"Divide and Conquer Methode took: {(time*1000):.2f} ms")
+    print(f"Divide and Conquer Methode took: {(time*1000):.5f} ms")
 
     #Clear Memory?
 
@@ -58,7 +58,7 @@ else: #Choice == 3
 
     print("You Choose Comparison Mode.")
     point_list = input_point_list()
-    iteration = input_iteration
+#    iteration = input_iteration
 
     #DnC
     dnc_time = dnc(point_list)

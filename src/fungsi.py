@@ -18,7 +18,7 @@ def Choice():
         Choice = int(input("Please Input Your Choice (1/2/3): "))
 
     return Choice
-
+"""
 def input_iteration():
 
     iteration = int(input("How Many Iterations (>=1): "))
@@ -28,7 +28,7 @@ def input_iteration():
         iteration = int(input("How Many Iterations (>=1): "))
 
     return iteration
-
+"""
 
 def input_point_list():
 #Meminta user untuk memasukkan point_listrmasi yang diperlukan, yaitu banyak titik kontrol, dan koordinat nya. 
@@ -53,12 +53,18 @@ def input_point_list():
         print('\t')
     return point_list
 
-def visualize (bezier_point):
+def visualize (bezier_point, point_list):
     #Visualisasikan
     
-    x = [x for x,_ in bezier_point]
-    y = [y for _,y in bezier_point]
+    bez_x = [x for x,_ in bezier_point]
+    bez_y = [y for _,y in bezier_point]
 
-    plt.plot(x,y)
+    plt.plot(bez_x,bez_y, marker = "o")
+    
+    pl_x = [x for x,_ in point_list]
+    pl_y = [y for _,y in point_list]
+
+    plt.plot(pl_x,pl_y, marker="^")
 
     plt.show()
+
