@@ -44,6 +44,7 @@ Evaluasi
 Program yang ada dirasa sudah cukup berjalan dengan baik. Namun karena keterbatasan waktu dan penulis, maka Algoritma Divide and Conquer untuk kasus tidak ada restriksi Order tidak selesai dibuat sehingga Mode Tanpa restriksi -> Divide and Conquer dan Mode Tanpa Restriksi -> Comparison Mode akan menghasilkan hasil yang salah. Selain itu, penulis juga tidak membuat GUI sehingga program hanya dijalankan dalam terminal. 
 
 Daftar Pustaka
+
 https://en.wikipedia.org/wiki/Bézier_curve#:~:text=A%20Bézier%20curve%20(%2Fˈb,by%20means%20of%20a%20formula.
 www.youtube.com/watch?v=aVwxzDHniEw
 https://www.codeproject.com/Articles/223159/Midpoint-Algorithm-Divide-and-Conquer-Method-for-D
